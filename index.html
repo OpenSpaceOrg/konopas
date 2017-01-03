@@ -175,9 +175,7 @@ var konopas = new KonOpas({
 });
 $.getJSON("http://localhost/sampledata", function(data){
 	program = data;
-	console.log('got data')
 	}).done(function(){
-		console.log('done');
 		konopas.set_program(program, {
 				'day': {},
 				'area': {},
