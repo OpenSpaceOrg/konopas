@@ -1,5 +1,5 @@
 function KonOpas(set) {
-	this.id = '';
+	this.id = 'SoCraTes';
 	this.lc = 'en';
 	this.tag_categories = false;
 	this.default_duration = 60;
