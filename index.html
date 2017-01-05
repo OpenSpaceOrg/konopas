@@ -163,7 +163,6 @@ if (navigator.standalone) document.getElementById('install-instructions').style.
 </div><!-- /main -->
 
 <script src="http://konopas.org/demo/data/program.js"></script>
-<script src="http://konopas.org/demo/data/people.js"></script>
 <script src="konopas.js"></script>
 <script>
 var konopas = new KonOpas({
@@ -173,7 +172,7 @@ var konopas = new KonOpas({
 	'show_all_days_by_default': true,
 	'use_server': false
 });
-$.getJSON("http://localhost/sampledata", function(data){
+$.getJSON("https://openspaceappjbe.herokuapp.com/v1/konopas", function(data){
 	program = data;
 	}).done(function(){
 		konopas.set_program(program, {
@@ -181,7 +180,6 @@ $.getJSON("http://localhost/sampledata", function(data){
 				'area': {},
 				'tag': {}
 				});
-		konopas.set_people(people);
 		konopas.set_view();
 		});
 </script>

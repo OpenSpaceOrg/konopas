@@ -12,7 +12,7 @@ function KonOpas(set) {
 	this.use_server = false;
 	this.log_messages = true;
 	this.cache_refresh_interval_mins = 60;
-	this.views = [ "star", "prog", "part", "info" ];
+	this.views = [ "star", "prog", "info" ];
 	if (typeof set == 'object') for (var i in set) this[i] = set[i];
 
 	if (!this.log_messages) _log = function(){};
