@@ -44,7 +44,7 @@ KonOpas.prototype.set_view = function() {
 		view = 'info';
 		tabs.style.display = 'none';
 		this.info.show();
-		if (this.server) this.server.error('Programme loading failed!');
+		if (this.server) this.server.error('Schedule loading failed!');
 	} else {
 		tabs.style.display = 'block';
 		if (!this.people || !this.people.list.length) {
