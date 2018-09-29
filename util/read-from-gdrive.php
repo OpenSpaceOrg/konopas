@@ -5,7 +5,7 @@
  *
  *
  *  A tool for using a Google Drive/Docs spreadsheet as a data source for
- *  KonOpas. To use, you'll need non-private spreadsheets for programme and
+ *  KonOpas. To use, you'll need non-private spreadsheets for session and
  *  people data, each with appropriate labels on the first row. See here for
  *  an example, from Finncon 2013:
  *
