@@ -293,17 +293,17 @@ KonOpas.Prog.prototype.show_filter_sum = function(ls, f) {
 		fs.innerHTML = i18n.txt('filter_sum_id', { 'N':ls.length, 'TITLE':_a(ls[0].title), 'ID':_a(f.id) });
 	} else {
 		var d = { 'N': f.n_listed,
-			'ALL': !f.show_all || f.tag_str || f.area_str || f.query_str ? '' : _a(i18n.txt('all'), {}, 0),
-			'TAG': f.tag_str ? _a(f.tag_str, 'tag') : '' };
+			'ALL': !f.show_all || f.tag_str || f.area_str || f.query_str ? '' : i18n.txt('all'),
+			'TAG': f.tag_str ? f.tag_str : '' };
 		if (f.day && !f.show_all) {
 			d['DAY'] = i18n.txt('weekday_n', {'N': KonOpas.parse_date(f.day).getDay() });
 			if (f.n_hidden) d['TIME'] = KonOpas.pretty_time(f.now, konopas);
 		} else {
 			if (f.n_hidden) d['LIVE'] = true;
 		}
-		if (f.area_str) d['AREA'] = _a(f.area_str, 'area');
-		if (f.query_str) d['Q'] = _a(f.query_str, 'query');
-		fs.innerHTML = i18n.txt('filter_sum', d);
+		if (f.area_str) d['AREA'] = f.area_str;
+		if (f.query_str) d['Q'] = f.query_str;
+		fs.textContent = i18n.txt('filter_sum', d);
 	}
 }
 
